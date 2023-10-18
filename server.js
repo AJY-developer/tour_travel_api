@@ -91,7 +91,7 @@ app.post('/login',async (req,res)=>{
 })
 
 
-app.get('/',(req,res)=>{
+app.get('/now',(req,res)=>{
     res.send('checking')
 })
 
