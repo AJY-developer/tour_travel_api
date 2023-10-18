@@ -13,7 +13,8 @@ app.use(express.json());
 
 mongoose.pluralize(null)
 
-dotenv.config({path:'./config.env'});
+// dotenv.config({path:'./config.env'});
+dotenv.config();
 
 
 const port = process.env.PORT;
