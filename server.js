@@ -19,11 +19,11 @@ dotenv.config({path:'./config.env'});
 const port = process.env.PORT;
 const db = process.env.DB;
 
-mongoose.connect(db).then(()=>{
-    console.log('database is connected');
-}).catch(()=>{
-    console.log('database base not connected');
-})
+// mongoose.connect(db).then(()=>{
+//     console.log('database is connected');
+// }).catch(()=>{
+//     console.log('database base not connected');
+// })
 
 
 const schema = new mongoose.Schema({
@@ -103,11 +103,18 @@ app.get('/now',(req,res)=>{
 
 
 
+mongoose.connect(db).then(()=>{
+    console.log('database is connected');
 
-
-app.listen(4004,()=>{
+    app.listen(8000,()=>{
     console.log('Port is listening');
 })
+
+}).catch(()=>{
+    console.log('database base not connected');
+})
+
+
 
 
 
