@@ -111,8 +111,8 @@ mongoose.connect(db).then(()=>{
     console.log('Port is listening');
 })
 
-}).catch(()=>{
-    console.log('database base not connected');
+}).catch((error)=>{
+    console.log('database base not connected',error);
 })
 
 
