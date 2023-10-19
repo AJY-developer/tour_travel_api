@@ -102,7 +102,7 @@ app.get('/now',(req,res)=>{
 
 
 
-
+console.log(db);
 
 mongoose.connect(db).then(()=>{
     console.log('database is connected');
